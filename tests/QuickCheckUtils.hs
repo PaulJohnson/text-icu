@@ -12,8 +12,8 @@ import Test.QuickCheck (Arbitrary(..), Gen, elements, listOf1)
 import qualified Data.Text as T
 import qualified Data.Text.ICU as I
 
-instance NFData Ordering where
-    rnf !_  = ()
+-- instance NFData Ordering where
+--     rnf !_  = ()
 
 instance Arbitrary T.Text where
     arbitrary = T.pack `fmap` arbitrary
