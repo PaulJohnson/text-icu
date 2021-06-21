@@ -1,4 +1,5 @@
 #include "hs_text_icu.h"
+#include "stdbool.h"
 
 UBreakIterator* __hs_ubrk_open(UBreakIteratorType type, const char *locale,
 			       const UChar *text, int32_t textLength,
@@ -305,7 +306,11 @@ int32_t __hs_u_strFoldCase(UChar *dest, int32_t destCapacity,
 
 int32_t __hs_u_strCompareIter(UCharIterator *iter1, UCharIterator *iter2)
 {
+<<<<<<< HEAD
     return u_strCompareIter(iter1, iter2, 1);
+=======
+    return u_strCompareIter(iter1, iter2, true);
+>>>>>>> 1d2b39abe9f32dc3d19d252391c074ccd82de23f
 }
 
 UBlockCode __hs_ublock_getCode(UChar32 c)
